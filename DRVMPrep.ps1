@@ -2,7 +2,7 @@
 Install-WindowsFeature -Name Hyper-V -IncludeManagementTools
 
 ## Create folder for downlaods
- cd C:\Users\Intellica\Desktop
+Set-Location C:\Users\Intellica\Desktop
 
  $url = "http://cdn.cloudbackup.management/maxdownloads/mxb-rc-windows-x64.exe"
  $ProgressPreference = 'SilentlyContinue'
@@ -10,7 +10,7 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools
  $ProgressPreference = "Continue"
 
 ## Initialize and format our virtual disk to hold the virtual disaster recover install files
-#get-disk | Where-Object PartitionStyle -eq 'raw' | sort number | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -UseMaximumSize -DriveLetter F | Format-Volume -FileSystem NTFS -NewFileSystemLabel "Restore Data" -Confirm
+get-disk | Where-Object PartitionStyle -eq 'raw' | sort number | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -UseMaximumSize -DriveLetter F | Format-Volume -FileSystem NTFS -NewFileSystemLabel "Restore Data" -Confirm
 
 #R
 
