@@ -5,8 +5,8 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools
 Set-TimeZone "E. Australia Standard Time"
 Set-WinSystemLocale -SystemLocal en-AU
 
-## Navigate to Intellica Desktop
-Set-Location C:\Users\Intellica\Desktop
+## Public Desktop
+Set-Location C:\Users\Public\Desktop
 
 # Download RC
  $url = "http://cdn.cloudbackup.management/maxdownloads/mxb-rc-windows-x64.exe"
